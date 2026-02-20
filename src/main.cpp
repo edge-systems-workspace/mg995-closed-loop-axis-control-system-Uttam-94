@@ -23,3 +23,14 @@ void setup() {
     Serial.begin(9600);
 }
 
+void loop() {
+    digitalWrite(trigpin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trigpin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigpin, LOW);
+    long duration = pulseIn(echopin, HIGH);
+    long distance = duration*0.0343/2;
+
+}
+
