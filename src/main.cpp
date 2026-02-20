@@ -10,6 +10,11 @@
  * Reads digital touch input from TTP223 sensor
  * and displays structured output via Serial Monitor.
  */
+
+Servo myservo;
+
+int trigpin = 9;
+int echopin = 10;
 void setup() {
 // write your initialization code here
 }
