@@ -31,6 +31,16 @@ void loop() {
     digitalWrite(trigpin, LOW);
     long duration = pulseIn(echopin, HIGH);
     long distance = duration*0.0343/2;
+    if(distance<15){
+        myservo.write(90);
+    }
+    else{
+        myservo.write(0);
+    }
+    Serial.print("Distance: ");
+    Serial.print(distance);
+    Serial.println(" cm");
+    delay(500);
 
 }
 
