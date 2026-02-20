@@ -15,11 +15,11 @@ Servo myservo;
 
 int trigpin = 9;
 int echopin = 10;
+
 void setup() {
-// write your initialization code here
+    myservo.attach(3);
+    pinMode(trigpin, OUTPUT);
+    pinMode(echopin, INPUT);
+    Serial.begin(9600);
 }
 
-
-void loop() {
-// write your code here
-}
